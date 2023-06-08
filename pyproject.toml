@@ -1,0 +1,16 @@
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+skip_gitignore = false
+line_length = 120
+atomic = true
+known_first_party = ["src", "scripts"]
+sections = ['FUTURE', 'STDLIB', 'THIRDPARTY', 'LOCALFOLDER', 'FIRSTPARTY']
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "serial",
+]

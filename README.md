@@ -1,10 +1,8 @@
 # Earthquake Analysis
 
-## Dataset
+## Dataset Info:
 
-Info:
 - 10 years of earthquake data through out the globe (2013-2023)
-
 
 Columns:
 

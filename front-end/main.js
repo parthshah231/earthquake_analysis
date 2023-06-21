@@ -16,7 +16,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 
 // add a sphere
-const texture = new THREE.TextureLoader().load('globe-night.jpg');
+const texture = new THREE.TextureLoader().load('static/globe-night.jpg');
 const sphereGeometry = new THREE.SphereGeometry(30, 50, 50);
 const sphereMaterial = new THREE.MeshBasicMaterial({
   map:texture

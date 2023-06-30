@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Earthquake Analysis</title>
+    
+    <style>
+      body{
+        margin: 0;
+      }
+    </style>
+
+  </head>
+  <body>
+    <!-- <div id="globe" style="height: 100vh; width: 100vw;"></div> -->
+    <div class="wrapper">
+      <!-- <div class="filters">Yellow!</div> -->
+      <div id="globe">
+        <canvas></canvas>
+      </div>
+    </div>
+    <script type="module" src="{{url_for('static', filename='js/main.js')}}"></script>
+  </body>
+</html>

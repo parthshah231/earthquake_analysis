@@ -1,0 +1,44 @@
+html, body{
+  margin: 0;
+  overflow: hidden;
+  /* background-color: blue; */
+}
+
+.wrapper{
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+}
+
+.filters {
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+}
+@media only screen and (max-width:992px){
+
+  html, body{
+    overflow-y: auto;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+  }
+
+  .filters {
+    height: 50vh;
+    order: 2;
+  }
+
+  #globe {
+    order: 1;
+    display: flex;
+  }
+}
+/* #globe{
+  height: 100vh;
+  width: 50%;
+  background-color: yellow;
+} */

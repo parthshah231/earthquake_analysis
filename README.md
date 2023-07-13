@@ -18,7 +18,7 @@ This data set is taken from USGS(U.S Geological Survey), USGS provides reliable 
 - The distribution of magnitude of earthquakes is bimodal with magnitudes 2.8 and 4.7
 - In the past 10 years, Alaska alone has recorded more than 52,000 earthquakes, followed by Hawaii and Puerto Rico at around 20,000 each.
 - If we only look at the earthquakes with magnitude greater than 4 than most earthquakes recorded are for Indonesia i.e. 16,000, followed by Japan and Papua New Guinea at 8,000 each.
-- Overall while trying to check, if there was any local trend/relationship along the years vs number of earthquakes, there is no conclusive evidence (I guess that's a good thing)
+- Overall while trying to check if there was any local trend/relationship along the years vs number of earthquakes, there is no conclusive evidence (I guess that's a good thing)
 - But, the regions getting hit with higher magnitudes of earthquakes (greater than 4) do seem to getting fewer and fewer number of such earthquakes as the years progress (Again, another good sign!)
 - There is no monthly trend (or an earthquake season) where any regions got the most number of earthquakes.
 - While checking if there is a relationship between magnitude vs depth of the earthquakes there is a clear indication that earthquakes with magnitude lower than magnitude 3 don't originate lower than 300km from Earth's surface (or maybe we are not able to detect those earthquakes with our current technology). 

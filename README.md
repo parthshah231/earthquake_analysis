@@ -25,7 +25,7 @@ This data set is taken from USGS(U.S Geological Survey), USGS provides reliable 
 
 ![3d-earth](https://github.com/parthshah231/earthquake_analysis/blob/master/README/3d_earth.png)
 
-- Above is a 3d model of earth to visualize the distribution of earthquakes globally. The model is built using the ThreeJS JavaScript library, which allows for the creation and display of animated 3D graphics in a web browser. The earthquake data used to populate this 3D model is fetched from a server using the Flask web framework.
+- Above is a 3d model of earth to visualize the distribution of earthquakes globally (for the year for 2023). The model is built using the ThreeJS JavaScript library, which allows for the creation and display of animated 3D graphics in a web browser. The earthquake data used to populate this 3D model is fetched from a server using the Flask web framework.
 
 ## Spatial autocorrelation:
 In this project, I have used two main statistical measures: Moran's I and Local Indicators of Spatial Association (LISA). These are methods for measuring spatial autocorrelation, which is the degree of dependency among observations in a geographic space.

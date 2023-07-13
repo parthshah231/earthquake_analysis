@@ -4,7 +4,7 @@ The purpose of this project is to analyze spatial correlations in global earthqu
 
 ## Dataset Info:
 
-This data set is taken from USGS(U.S Geological Survey). The USGS provides reliable scientific information to describe and understand the Earth; minimize loss of life and property from natural disasters; manage water, biological, energy, and mineral resources; and enhance and protect our quality of life.
+This data set is taken from USGS(U.S Geological Survey), USGS provides reliable scientific information/ data to describe and understand the Earth.
 - 10 years of earthquake data through out the globe (2013-2023)
 - Link to the website: https://earthquake.usgs.gov/earthquakes/feed/
 
@@ -14,7 +14,7 @@ This data set is taken from USGS(U.S Geological Survey). The USGS provides relia
 
 ## Analysis:
 
-- Based on data collected from Jan 2013 to Jun 2023, number of earthquakes we face yearly are roughly around 30,000. With 2018, recording the highest number of earthquakes close to 45,000 and 2013 being the lowest close to 20,000.
+- Based on data collected from Jan 2013 to Jun 2023, number of earthquakes we face yearly are roughly around 30,000. The year of 2018 recorded highest number of earthquakes which was close to 45,000 whereas the year of 2013 recorded the lowest number close to 20,000.
 - The distribution of magnitude of earthquakes is bimodal with magnitudes 2.8 and 4.7
 - In the past 10 years, Alaska alone has recorded more than 52,000 earthquakes, followed by Hawaii and Puerto Rico at around 20,000 each.
 - If we only look at the earthquakes with magnitude greater than 4 than most earthquakes recorded are for Indonesia i.e. 16,000, followed by Japan and Papua New Guinea at 8,000 each.

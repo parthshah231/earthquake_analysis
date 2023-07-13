@@ -40,12 +40,12 @@ In this project, I have used two main statistical measures: Moran's I and Local 
 
 ![Lisa quadrants](https://github.com/parthshah231/earthquake_analysis/blob/master/README/lisa_quadrants.png)
 
-The quadrants represent the following:    \
+The quadrants represent the following:
 
-- LH: Low values surrounded by high values    \
-- HH: High values surrounded by high values   \
-- LL: Low values surrounded by low values     \
-- HL: High values surrounded by low values    \
+- LH: Low values surrounded by high values   
+- HH: High values surrounded by high values  
+- LL: Low values surrounded by low values    
+- HL: High values surrounded by low values   
 
 > HH and LL are examples of positive spatial autocorrelation as you can see most of the values are clustered together in HH and LL quadrants.
 

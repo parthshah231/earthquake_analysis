@@ -29,8 +29,8 @@ This data set is taken from USGS(U.S Geological Survey), USGS provides reliable 
 
 ## Spatial autocorrelation:
 In this project, I have used two main statistical measures: Moran's I and Local Indicators of Spatial Association (LISA). These are methods for measuring spatial autocorrelation, which is the degree of dependency among observations in a geographic space.
-- Moran's I: measure of spatial autocorrelation, values can range from -1 (indicating perfect dispersion or negative spatial autocorrelation) to +1 (perfect correlation or positive spatial autocorrelation). A value close to 0 indicates a random spatial pattern. Positive spatial autocorrelation occurs where similar values occur near one another. This might be high house prices in one neighborhood tending to be near other high house prices. Negative spatial autocorrelation, by contrast, occurs where dissimilar values occur near one another.
-- Local Moran's I (LISA):  local measure of spatial autocorrelation, meaning it gives a value for each feature in the dataset, representing the level of spatial autocorrelation for that feature and its neighbors. It identifies where clusters or spatial outliers are located and the type of cluster or spatial outlier (whether high-high, low-low, high-low, or low-high). Hence, it not only identifies significant spatial clusters or outliers but also classifies them into types.
+- Moran's I: It is a measure of spatial autocorrelation for which the values range from -1 (indicating perfect dispersion or negative spatial autocorrelation) to +1 (perfect correlation or positive spatial autocorrelation). A value close to 0 indicates a random spatial pattern. Positive spatial autocorrelation occurs where similar values occur near one another. This might be high house prices in one neighborhood tending to be near other high house prices. Negative spatial autocorrelation, by contrast, occurs where dissimilar values occur near one another.
+- Local Moran's I (LISA):  It is a local measure of spatial autocorrelation, meaning it gives a value for each feature in the dataset, representing the level of spatial autocorrelation for that feature and its neighbors. It identifies where clusters or spatial outliers are located and the type of cluster or spatial outlier (whether high-high, low-low, high-low, or low-high). Hence, it not only identifies significant spatial clusters or outliers but also classifies them into types.
 
 - Measures for the year of 2023 (so far):   \
 **Moran's I**: 0.7833756435758131           \
@@ -47,16 +47,22 @@ The quadrants represent the following:
 - LL: Low values surrounded by low values    
 - HL: High values surrounded by low values   
 
-> HH and LL are examples of positive spatial autocorrelation as you can see most of the values are clustered together in HH and LL quadrants.
+HH and LL are examples of positive spatial autocorrelation as you can see most of the values are clustered together in HH and LL quadrants.
 
 ![spatial autocorrelation](https://github.com/parthshah231/earthquake_analysis/blob/master/README/spatial_autocorrelation.png)
 
 - The above image shows the local spatial autocorrelation of the earthquake magnitude.
 - The red areas represent high values surrounded by high values (HH), and the blue areas represent low values surrounded by low values (LL).
 
+**Note:** Lisa considers the earthquake magnitudes in relation to their neighboring earthquakes and does not define a fixed threshold for what constitutes "high" or "low" magnitudes. The determination of high and low is relative to the context of neighboring magnitudes.
+
+![Earthquakes in 2023](https://github.com/parthshah231/earthquake_analysis/blob/master/README/earthquakes_2023.png)
+
+The above plot helps us verify the spatial correlation by Lisa.
+
 ## Conclusions
 - Spatial autocorrelation analysis revealed that earthquake magnitude is positively correlated for the year 2023, with a Moran's I of 0.783 and a LISA of 0.7833. This could imply that seismic activities tend to occur in clusters rather than being randomly distributed. 
-- Furthermore, I observed that areas with high magnitude earthquakes tend to be clustered together (HH), as do areas with low magnitude earthquakes (LL). This finding suggests the presence of seismic "hotspots" and "coldspots" which could be of interest for further study.
+- Furthermore, it is observed that areas with high magnitude earthquakes tend to be clustered together (HH), as do areas with low magnitude earthquakes (LL). This finding suggests the presence of seismic "hotspots" and "coldspots" which could be of interest for further study.
 
 ## Further Implementation
 - I am planning to add filters for the web page, where user can filter the year and month to see the spread of earthquakes across the globe for a specific period. 

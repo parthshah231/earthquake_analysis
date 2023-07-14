@@ -18,8 +18,8 @@ This data set is taken from USGS(U.S Geological Survey), USGS provides reliable 
 - The distribution of magnitude of earthquakes is bimodal with magnitudes 2.8 and 4.7
 - In the past 10 years, Alaska alone has recorded more than 52,000 earthquakes, followed by Hawaii and Puerto Rico at around 20,000 each.
 - If we only look at the earthquakes with magnitude greater than 4 than most earthquakes recorded are for Indonesia i.e. 16,000, followed by Japan and Papua New Guinea at 8,000 each.
-- Overall while trying to check if there was any local trend/relationship along the years vs number of earthquakes, there is no conclusive evidence (I guess that's a good thing)
-- But, the regions getting hit with higher magnitudes of earthquakes (greater than 4) do seem to getting fewer and fewer number of such earthquakes as the years progress (Again, another good sign!)
+- Overall while trying to check if there was any local trend/relationship along the years vs number of earthquakes, there is no conclusive evidence.
+- But, the regions getting hit with higher magnitudes of earthquakes (greater than 4) do seem to getting fewer and fewer number of such earthquakes as the years progress.
 - There is no monthly trend (or an earthquake season) where any regions got the most number of earthquakes.
 - While checking if there is a relationship between magnitude vs depth of the earthquakes there is a clear indication that earthquakes with magnitude lower than magnitude 3 don't originate lower than 300km from Earth's surface (or maybe we are not able to detect those earthquakes with our current technology). 
 
@@ -38,7 +38,7 @@ In this project, I have used two main statistical measures: Moran's I and Local 
 
 - This indicates our data for the year of 2023 is positively correlated.
 
-![Lisa quadrants](https://github.com/parthshah231/earthquake_analysis/blob/master/README/lisa_quadrants.png)
+![LISA quadrants](https://github.com/parthshah231/earthquake_analysis/blob/master/README/lisa_quadrants.png)
 
 The quadrants represent the following:
 
@@ -54,11 +54,11 @@ HH and LL are examples of positive spatial autocorrelation as you can see most o
 - The above image shows the local spatial autocorrelation of the earthquake magnitude.
 - The red areas represent high values surrounded by high values (HH), and the blue areas represent low values surrounded by low values (LL).
 
-**Note:** Lisa considers the earthquake magnitudes in relation to their neighboring earthquakes and does not define a fixed threshold for what constitutes "high" or "low" magnitudes. The determination of high and low is relative to the context of neighboring magnitudes.
+**Note:** LISA considers the earthquake magnitudes in relation to their neighboring earthquakes and does not define a fixed threshold for what constitutes "high" or "low" magnitudes. The determination of high and low is relative to the context of neighboring magnitudes.
 
 ![Earthquakes in 2023](https://github.com/parthshah231/earthquake_analysis/blob/master/README/earthquakes_2023.png)
 
-The above plot helps us verify the spatial correlation by Lisa.
+The above plot helps us verify the spatial correlation by LISA.
 
 ## Conclusions
 - Spatial autocorrelation analysis revealed that earthquake magnitude is positively correlated for the year 2023, with a Moran's I of 0.783 and a LISA of 0.7833. This could imply that seismic activities tend to occur in clusters rather than being randomly distributed. 

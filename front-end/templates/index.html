@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Earthquake Analysis</title>
+    <title>Vite App</title>
     
     <style>
       body{
@@ -16,11 +16,162 @@
   <body>
     <!-- <div id="globe" style="height: 100vh; width: 100vw;"></div> -->
     <div class="wrapper">
-      <!-- <div class="filters">Yellow!</div> -->
+      <div class="filters">
+
+        <span id="filter-text"> View data from: </span>
+
+        <select id="year">
+          <option value="2013">2013</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023" selected>2023</option>
+        </select>
+
+        <select id="month">
+          <option value="1" selected>Jan</option>
+          <option value="2">Feb</option>
+          <option value="3">Mar</option>
+          <option value="4">Apr</option>
+          <option value="5">May</option>
+          <option value="6">Jun</option>
+          <option value="7">Jul</option>
+          <option value="8">Aug</option>
+          <option value="9">Sep</option>
+          <option value="10">Oct</option>
+          <option value="11">Nov</option>
+          <option value="12">Dec</option>
+        </select>
+
+      </div>
       <div id="globe">
+        <div class="loadingio-spinner-double-ring-b8es6owmp3k"><div class="ldio-bushhr8bkbe">
+        <div></div>
+        <div></div>
+        <div><div></div></div>
+        <div><div></div></div>
+        </div></div>
         <canvas></canvas>
       </div>
     </div>
+    
+      <style type="text/css">
+      @keyframes ldio-bushhr8bkbe {
+        0% { transform: rotate(0) }
+        100% { transform: rotate(360deg) }
+      }
+
+      .loadingio-spinner-double-ring-b8es6owmp3k.active {
+        display: block;
+      }
+  
+      .ldio-bushhr8bkbe > div { transform: translateZ(0) }
+      .ldio-bushhr8bkbe div { box-sizing: border-box!important }
+      .ldio-bushhr8bkbe > div {
+        position: absolute;
+        width: 144px;
+        height: 144px;
+        top: 28px;
+        left: 28px;
+        border-radius: 50%;
+        border: 16px solid #000;
+        border-color: #f7f7f7 transparent #f7f7f7 transparent;
+        animation: ldio-bushhr8bkbe 1s linear infinite;
+      }
+      
+      .ldio-bushhr8bkbe > div:nth-child(2), .ldio-bushhr8bkbe > div:nth-child(4) {
+        width: 108px;
+        height: 108px;
+        top: 46px;
+        left: 46px;
+        animation: ldio-bushhr8bkbe 1s linear infinite reverse;
+      }
+      .ldio-bushhr8bkbe > div:nth-child(2) {
+        border-color: transparent #cfc7c0 transparent #cfc7c0
+      }
+      .ldio-bushhr8bkbe > div:nth-child(3) { border-color: transparent }
+      .ldio-bushhr8bkbe > div:nth-child(3) div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: rotate(45deg);
+      }
+      .ldio-bushhr8bkbe > div:nth-child(3) div:before, .ldio-bushhr8bkbe > div:nth-child(3) div:after { 
+        content: "";
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: -16px;
+        left: 48px;
+        background: #f7f7f7;
+        border-radius: 50%;
+        box-shadow: 0 128px 0 0 #f7f7f7;
+      }
+      .ldio-bushhr8bkbe > div:nth-child(3) div:after {
+        left: -16px;
+        top: 48px;
+        box-shadow: 128px 0 0 0 #f7f7f7;
+      }
+      
+      .ldio-bushhr8bkbe > div:nth-child(4) { border-color: transparent; }
+      .ldio-bushhr8bkbe > div:nth-child(4) div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: rotate(45deg);
+      }
+      .ldio-bushhr8bkbe > div:nth-child(4) div:before, .ldio-bushhr8bkbe > div:nth-child(4) div:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: -16px;
+        left: 30px;
+        background: #cfc7c0;
+        border-radius: 50%;
+        box-shadow: 0 92px 0 0 #cfc7c0;
+      }
+      .ldio-bushhr8bkbe > div:nth-child(4) div:after {
+        left: -16px;
+        top: 30px;
+        box-shadow: 92px 0 0 0 #cfc7c0;
+      }
+      .loadingio-spinner-double-ring-b8es6owmp3k {
+        position: absolute;
+        top: 50%;
+        opacity: 0.5;
+        z-index: 2;
+        width: 100%;
+        height: 200px;
+        display: inline-block;
+        overflow: hidden;
+        background: transparent;
+        display: none;
+        text-align: center;
+        transform: translateY(-50%);
+      }
+      .ldio-bushhr8bkbe {
+        width: 200px;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0;
+        margin: 0 auto;
+      }
+      .ldio-bushhr8bkbe div { box-sizing: content-box; }
+      /* generated by https://loading.io/ */
+      </style>
+
+
     <script type="module" src="{{url_for('static', filename='js/main.js')}}"></script>
   </body>
 </html>

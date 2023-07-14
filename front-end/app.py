@@ -2,7 +2,7 @@ import math
 from pathlib import Path
 
 import pandas as pd
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
@@ -59,12 +59,21 @@ def validate(points_dict):
 @app.route("/coordinates")
 # add time filter (year / month in the below case 2023) dynamically
 def get_coordinates():
+    year = request.args.get("year", "2023")
+    month = request.args.get("month", "1")
     df = pd.read_csv(DATA / "full_data_2013_2023.csv")
+
+    # print("year", year)
+    # print("month", month)
 
     df["time"] = pd.to_datetime(df["time"])
     df["year"] = df["time"].dt.year
+    df["month"] = df["time"].dt.month
 
-    df = df[df["year"] == 2023]
+    # df = df[df["year"] == int(year)]
+    df = df[(df["year"] == int(year)) & (df["month"] == int(month))]
+    # print(df.head())
+    print("fetching new points")
 
     coordinates_dict = {
         (lat, lon): [place, mag]

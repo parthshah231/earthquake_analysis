@@ -16,7 +16,23 @@ html, body{
   background: #000;
   color: #fff;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+#year {
+  margin-left: 10px;
+}
+
+#month {
+  margin-left: 10px;
+}
+
+#globe{
+  position: relative;
+}
+
 @media only screen and (max-width:992px){
 
   html, body{
@@ -28,8 +44,11 @@ html, body{
   }
 
   .filters {
-    height: 50vh;
+    height: auto;
     order: 2;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
   }
 
   #globe {
@@ -37,8 +56,3 @@ html, body{
     display: flex;
   }
 }
-/* #globe{
-  height: 100vh;
-  width: 50%;
-  background-color: yellow;
-} */

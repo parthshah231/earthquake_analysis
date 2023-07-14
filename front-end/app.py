@@ -79,4 +79,4 @@ def get_coordinates():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5173)
+    app.run(debug=True)

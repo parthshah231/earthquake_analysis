@@ -70,6 +70,11 @@ camera.position.z = 60;
 
 const controls = new OrbitControls( camera, renderer.domElement );
 
+// control zooming
+controls.minDistance = 55;
+controls.maxDistance = 75;
+controls.update();
+
 const animate = function () {
   requestAnimationFrame( animate );
   // sphere.rotation.y += 0.003;
